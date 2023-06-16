@@ -4,25 +4,27 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3005",
-    "build": "next build",
-    "start": "next start",
+    "build": "next build && next export",
+    "start": "next start -p 3005",
     "lint": "next lint"
   },
   "dependencies": {
+    "@mui/material": "^5.13.1",
     "@next/font": "13.3.1",
-    "@prisma/client": "^4.13.0",
+    "@prisma/client": "4.13.0",
     "@types/node": "18.16.1",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.1",
     "next": "13.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "sharp": "^0.32.1",
     "typescript": "5.0.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.20",
-    "prisma": "^4.13.0",
+    "prisma": "4.13.0",
     "tailwindcss": "^3.2.4"
   }
 }

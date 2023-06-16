@@ -6,7 +6,9 @@ type Props = {};
 
 export default function SearchBar({}: Props) {
   const router = useRouter();
+
 	const [location, setLocation] = useState('');
+
 	return (
 		<div className='text-left text-lg py-3 m-auto flex justify-center'>
 			<input
@@ -19,8 +21,8 @@ export default function SearchBar({}: Props) {
 			<button
 				className='rounded bg-red-600 px-9 py-2 text-white'
 				onClick={() => {
-					// if(location==='banana') return
-					router.push('/search');
+					router.push(`/search?city=${location}`);
+					setLocation('');
 				}}
 			>
 				Let's go

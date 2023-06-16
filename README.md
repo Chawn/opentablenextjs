@@ -125,5 +125,10 @@ npx prisma db push
 ``` 
 
 - Insert initial data by create file pages/api/seed.ts
+``` 
+...
+await prisma.cuisine.createMany(...)
+...
+````
 - open http://localhost:3005/api/seed in chrome to insert data
 - 
